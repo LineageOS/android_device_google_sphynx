@@ -49,6 +49,9 @@ endif
 # Charger
 WITH_LINEAGE_CHARGER := false
 
+# Display
+TARGET_SCREEN_DENSITY := 320
+
 # Kernel
 TARGET_KERNEL_CLANG_COMPILE    := false
 KERNEL_TOOLCHAIN               := $(shell pwd)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-9.3/bin
