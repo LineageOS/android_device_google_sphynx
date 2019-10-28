@@ -129,4 +129,9 @@
     <!-- The BT name of the keyboard packaged with the device. If this is defined, SystemUI will
          automatically try to pair with it when the device exits tablet mode. -->
     <string translatable="false" name="config_packagedKeyboardName">Pixel C Keyboard</string>
+
+    <!-- The list of components which should be automatically disabled for a specific device. -->
+    <string-array name="config_deviceDisabledComponents" translatable="false">
+        <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
+    </string-array>
 </resources>
