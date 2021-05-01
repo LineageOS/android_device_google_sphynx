@@ -19,3 +19,6 @@ import /vendor/etc/init/hw/init.loki_foster_e_common.rc
 on fs
     mount_all /vendor/etc/fstab.dragon
     swapon_all /vendor/etc/fstab.dragon
+
+on post-fs-data
+    chown system system /sys/class/backlight/lp8557-backlight/brightness
