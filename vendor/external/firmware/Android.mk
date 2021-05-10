@@ -1,4 +1,4 @@
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,12 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/nvidia/t210-common/vendor/t210-by-flags.mk
-include device/nvidia/tegra-common/vendor/common-by-flags.mk
-include device/google/sphynx/vendor/rel-shield-r/bcm_firmware/bcm.mk
-include device/google/sphynx/vendor/sphynx-recovery.mk
+LOCAL_PATH := $(call my-dir)
 
-PRODUCT_PACKAGES += public.libraries
+EXTERNAL_FIRMWARE_PATH := ../../../../../vendor/google/sphynx/firmware
 
-# Smaug bpmp
-PRODUCT_PACKAGES += bpmp-lite
+include $(CLEAR_VARS)
+LOCAL_MODULE               := bpmp-lite
+LOCAL_SRC_FILES            := $(EXTERNAL_FIRMWARE_PATH)/bpmp.bin
+LOCAL_MODULE_SUFFIX        := .bin
+LOCAL_MODULE_CLASS         := ETC
+LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware/tegra21x
+include $(BUILD_PREBUILT)
