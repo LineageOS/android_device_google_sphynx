@@ -25,7 +25,11 @@ TARGET_USERIMAGES_USE_EXT4         := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE  := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR             := vendor
+<<<<<<< HEAD   (3b29d5 sphynx: Inherit non_ab_device.mk)
 BOARD_BUILD_SYSTEM_ROOT_IMAGE      := true
+=======
+BOARD_USES_FULL_RECOVERY_IMAGE     := true
+>>>>>>> CHANGE (4fbab7 sphynx: Ship full recovery image)
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := dragon,sphynx
