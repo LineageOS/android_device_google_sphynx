@@ -66,14 +66,3 @@ LOCAL_MODULE_SUFFIX := .sh
 LOCAL_MODULE_CLASS  := EXECUTABLES
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE               := init.eks2.rc
-LOCAL_MODULE_CLASS         := ETC
-LOCAL_SRC_FILES            := init.eks2.rc
-LOCAL_VENDOR_MODULE        := true
-LOCAL_MODULE_RELATIVE_PATH := init
-LOCAL_POST_INSTALL_CMD     := \
-    mkdir -p $(TARGET_OUT_VENDOR)/app/eks2; \
-    ln -sf /data/vendor/eks2/eks2.dat $(TARGET_OUT_VENDOR)/app/eks2/eks2.dat
-include $(BUILD_PREBUILT)
