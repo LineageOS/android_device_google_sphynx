@@ -77,13 +77,6 @@ PRODUCT_PACKAGES += \
     nvaudio_fx.xml
 endif
 
-# EKS
-ifneq ($(filter rel-shield-r, $(TARGET_TEGRA_KEYSTORE)),)
-PRODUCT_PACKAGES += \
-    init.eks2.rc \
-    eks2_public.dat
-endif
-
 # Kernel
 ifneq ($(TARGET_PREBUILT_KERNEL),)
 TARGET_FORCE_PREBUILT_KERNEL := true
