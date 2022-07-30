@@ -31,8 +31,6 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE      := true
 TARGET_OTA_ASSERT_DEVICE := dragon,sphynx
 
 # Boot image
-BOARD_CUSTOM_BOOTIMG    := true
-BOARD_CUSTOM_BOOTIMG_MK := device/google/sphynx/mkbootimg.mk
 BOARD_BOOT_HEADER_VERSION := 1
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
