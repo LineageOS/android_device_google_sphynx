@@ -122,16 +122,6 @@ PRODUCT_PACKAGES += \
     enctune.conf
 endif
 
-# Netflix
-ifeq ($(PRODUCT_IS_ATV),true)
-PRODUCT_PACKAGES += \
-    NetflixConfig \
-    NetflixConfigOverlay
-PRODUCT_COPY_FILES += \
-    device/google/sphynx/permissions/netflix.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/netflix.xml \
-    device/google/sphynx/permissions/nrdp.modelgroup.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/nrdp.modelgroup.xml
-endif
-
 # NVIDIA specific permissions
 PRODUCT_COPY_FILES += \
     device/google/sphynx/permissions/com.nvidia.feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nvidia.feature.xml
