@@ -14,11 +14,6 @@
 # limitations under the License.
 #
 
-# Only include Shield apps for first party targets
-ifneq ($(filter $(word 2,$(subst _, ,$(TARGET_PRODUCT))), sphynx),)
-include device/nvidia/shield-common/shield.mk
-endif
-
 TARGET_TEGRA_VARIANT    := common
 
 TARGET_TEGRA_BT       := bcm
@@ -107,10 +102,6 @@ PRODUCT_PACKAGES += \
     media_profiles_V1_0.xml \
     enctune.conf
 endif
-
-# NVIDIA specific permissions
-PRODUCT_COPY_FILES += \
-    device/google/sphynx/permissions/com.nvidia.feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nvidia.feature.xml
 
 # PHS
 ifneq ($(TARGET_TEGRA_PHS),)

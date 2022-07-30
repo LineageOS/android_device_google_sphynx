@@ -15,6 +15,5 @@
 include device/nvidia/t210-common/vendor/t210-by-flags.mk
 include device/nvidia/tegra-common/vendor/common-by-flags.mk
 include device/google/sphynx/vendor/bcm_firmware/bcm.mk
-include device/nvidia/shield-common/vendor/shield-by-flags.mk
 
 PRODUCT_PACKAGES += public.libraries
