@@ -48,7 +48,6 @@ PRODUCT_SOONG_NAMESPACES += device/google/sphynx
 PRODUCT_PACKAGES += \
     fstab.dragon \
     init.dragon.rc \
-    init.loki_e_common.rc \
     init.loki_foster_e_common.rc \
     init.recovery.dragon.rc \
     power.dragon.rc
