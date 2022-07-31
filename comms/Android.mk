@@ -14,11 +14,12 @@
 
 LOCAL_PATH := $(call my-dir)
 
+SPHYNX_FIRMWARE_PATH := ../../../../../vendor/google/sphynx/firmware
+
 include $(CLEAR_VARS)
-LOCAL_MODULE               := wifi_scan_config.conf
-LOCAL_MODULE_TAGS          := optional
+LOCAL_MODULE               := bpmp-lite
+LOCAL_SRC_FILES            := $(SPHYNX_FIRMWARE_PATH)/bpmp.bin
+LOCAL_MODULE_SUFFIX        := .bin
 LOCAL_MODULE_CLASS         := ETC
-LOCAL_SRC_FILES            := wifi_scan_config.conf
-LOCAL_MODULE_RELATIVE_PATH := wifi
-LOCAL_VENDOR_MODULE        := true
+LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware/tegra21x
 include $(BUILD_PREBUILT)
