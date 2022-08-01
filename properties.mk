@@ -7,11 +7,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.device.default_name=Pixel C
 
-ifneq ($(TARGET_TEGRA_KERNEL),3.10)
 # Bpf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.ebpf.supported=1
-endif
 
 # Charger
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += \
