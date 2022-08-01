@@ -26,10 +26,7 @@ TARGET_TEGRA_CAMERA   := rel-shield-r
 TARGET_TEGRA_KERNEL   := 4.9
 TARGET_TEGRA_WIDEVINE := rel-shield-r
 TARGET_TEGRA_WIFI     := bcm
-
-ifneq ($(filter 3.10 4.9, $(TARGET_TEGRA_KERNEL)),)
 TARGET_TEGRA_WIREGUARD := compat
-endif
 
 include device/nvidia/t210-common/t210.mk
 
@@ -90,7 +87,7 @@ endif
 # Kernel
 ifneq ($(TARGET_PREBUILT_KERNEL),)
 TARGET_FORCE_PREBUILT_KERNEL := true
-else ifeq ($(TARGET_TEGRA_KERNEL),4.9)
+else
 PRODUCT_PACKAGES += \
     cypress-fmac
 endif
