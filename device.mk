@@ -102,6 +102,9 @@ PRODUCT_PACKAGES += \
     enctune.conf
 endif
 
+# Partitions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+
 # PHS
 ifneq ($(TARGET_TEGRA_PHS),)
 PRODUCT_PACKAGES += \
