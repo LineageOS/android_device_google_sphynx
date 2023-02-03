@@ -26,10 +26,6 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     nvgpu
 
-# Tegra sata
-BOARD_VENDOR_KERNEL_MODULES_LOAD += \
-    ahci_tegra
-
 # Realtek 8168
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     r8168
@@ -74,19 +70,6 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     ina3221
 
-# TV Tuners
-BOARD_VENDOR_KERNEL_MODULES_LOAD += \
-    videobuf_dvb \
-    lgdt3306a \
-    si2168 \
-    si2157 \
-    lgdt3305 \
-    tda18272 \
-    em28xx_dvb \
-    em28xx_rc \
-    cx25840 \
-    cx231xx_dvb
-
 # USB Storage
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     usb_storage
@@ -94,12 +77,6 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
 # USB Modem
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     cdc_acm
-
-# Nvidia Controllers
-BOARD_VENDOR_KERNEL_MODULES_LOAD += \
-    ozwpan \
-    hid_nvidia_blake \
-    hid_jarvis_remote
 
 # Misc Controllers
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
