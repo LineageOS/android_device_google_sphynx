@@ -116,6 +116,9 @@ PRODUCT_PACKAGES += $(PRODUCT_PACKAGES_SHIPPING_API_LEVEL_29)
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
 
+# VBoot
+$(call inherit-product, build/target/product/vboot.mk)
+
 # WiFi
 PRODUCT_PACKAGES += \
     WifiOverlay
