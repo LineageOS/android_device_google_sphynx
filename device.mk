@@ -67,10 +67,6 @@ PRODUCT_PACKAGES += \
     nvaudio_fx.xml
 endif
 
-# Kernel Modules
-PRODUCT_PACKAGES += \
-    cypress-fmac
-
 # Keylayouts
 PRODUCT_PACKAGES += \
     gpio-keys.kl
