@@ -1,4 +1,4 @@
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := $(call my-dir)
+include device/nvidia/t210-common/vendor/t210-by-flags.mk
+include device/nvidia/tegra-common/vendor/common-by-flags.mk
+include device/google/sphynx/vendor/bcm_firmware/bcm.mk
+include device/nvidia/shield-common/vendor/shield-by-flags.mk
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+PRODUCT_PACKAGES += public.libraries

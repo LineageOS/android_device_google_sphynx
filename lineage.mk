@@ -1,4 +1,4 @@
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,21 +13,10 @@
 # limitations under the License.
 
 # Boot Animation
-TARGET_SCREEN_HEIGHT      := 1920
-TARGET_SCREEN_WIDTH       := 1080
+TARGET_SCREEN_HEIGHT := 1800
+TARGET_SCREEN_WIDTH  := 2560
 
 # GMS
 ifeq ($(WITH_GMS),true)
 GMS_MAKEFILE=gms_minimal.mk
 endif
-
-# Unified device support
-TARGET_INIT_VENDOR_LIB := //device/nvidia/foster:libinit_foster
-PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
-    ro.product.vendor.device \
-    ro.product.vendor.model \
-    ro.product.vendor.name \
-    ro.vendor.build.fingerprint
-PRODUCT_PACKAGES += \
-    init_tegra \
-    resize2fs_static

@@ -1,4 +1,4 @@
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,6 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := $(call my-dir)
+LOCAL_PATH := device/google/sphynx/vendor/bcm_firmware
+COMMON_BCM_PATH := device/nvidia/tegra-common/vendor/rel-shield-r/bcm_firmware
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+include $(COMMON_BCM_PATH)/bcm4354/device-bcm.mk
+include $(LOCAL_PATH)/clm.mk
+include $(LOCAL_PATH)/nvram.mk
+
+PRODUCT_PACKAGES += \
+    bcm4350
