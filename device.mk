@@ -31,8 +31,8 @@ include device/nvidia/t210-common/t210.mk
 include device/google/sphynx/properties.mk
 
 PRODUCT_CHARACTERISTICS   := tablet
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi mdpi hdpi tvdpi
-PRODUCT_AAPT_PREF_CONFIG  := xhdpi
+PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
