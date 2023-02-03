@@ -34,12 +34,19 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     bluedroid_pm
 
+# Sphynx specific audio drivers
+BOARD_VENDOR_KERNEL_MODULES_LOAD += \
+    snd_soc_max98357a \
+    snd_soc_rt5677 \
+    snd_soc_nau8825
+
 # Tegra hdmi audio
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     snd-hda-tegra
 
 # Tegra audio processing engine
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
+<<<<<<< HEAD   (c4ef6b modules: Fix up names to match filenames)
     snd-soc-tegra210-alt-xbar \
     snd-soc-tegra210-alt-admaif \
     snd-soc-tegra210-alt-sfc \
@@ -52,6 +59,20 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     snd-soc-tegra210-alt-mvc \
     snd-soc-tegra210-alt-ope \
     snd-soc-tegra-machine-driver
+=======
+    snd_soc_tegra210_alt_xbar \
+    snd_soc_tegra210_alt_admaif \
+    snd_soc_tegra210_alt_sfc \
+    snd_soc_tegra210_alt_i2s \
+    snd_soc_tegra210_alt_mixer \
+    snd_soc_tegra210_alt_afc \
+    snd_soc_tegra210_alt_adx \
+    snd_soc_tegra210_alt_amx \
+    snd_soc_tegra210_alt_dmic \
+    snd_soc_tegra210_alt_mvc \
+    snd_soc_tegra210_alt_ope \
+    snd_soc_tegra_machine_driver_rt5677_mobile
+>>>>>>> CHANGE (641501 [DNM] [TMP] sphynx: Build device-specific audio machine driv)
 
 # Userspace aes crypto access
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
