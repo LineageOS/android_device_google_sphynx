@@ -12,85 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(TARGET_TEGRA_DEFAULT_BRANCH),rel-shield-r)
 LOCAL_PATH := $(call my-dir)
-FOSTER_BCM_PATH := ../../../../../../vendor/nvidia/foster/rel-shield-r/bcm_firmware
-
-include $(CLEAR_VARS)
-LOCAL_MODULE               := nvram_darcy_a00
-LOCAL_SRC_FILES            := $(FOSTER_BCM_PATH)/bcm4354/nvram_darcy_a00.txt
-LOCAL_MODULE_SUFFIX        := .txt
-LOCAL_MODULE_CLASS         := ETC
-LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware
-LOCAL_MODULE_TAGS          := optional
-LOCAL_MODULE_OWNER         := nvidia
-include $(BUILD_NVIDIA_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE               := nvram_foster_e_4354
-LOCAL_SRC_FILES            := $(FOSTER_BCM_PATH)/bcm4354/nvram_foster_e_4354.txt
-LOCAL_MODULE_SUFFIX        := .txt
-LOCAL_MODULE_CLASS         := ETC
-LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware
-LOCAL_MODULE_TAGS          := optional
-LOCAL_MODULE_OWNER         := nvidia
-include $(BUILD_NVIDIA_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE               := nvram_foster_e_antenna_tuned_4354
-LOCAL_SRC_FILES            := $(FOSTER_BCM_PATH)/bcm4354/nvram_foster_e_antenna_tuned_4354.txt
-LOCAL_MODULE_SUFFIX        := .txt
-LOCAL_MODULE_CLASS         := ETC
-LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware
-LOCAL_MODULE_TAGS          := optional
-LOCAL_MODULE_OWNER         := nvidia
-include $(BUILD_NVIDIA_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE               := brcmfmac4356-pcie.txt
-LOCAL_SRC_FILES            := $(FOSTER_BCM_PATH)/bcm4356/brcmfmac4356-pcie.txt
-LOCAL_MODULE_CLASS         := ETC
-LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware
-LOCAL_MODULE_TAGS          := optional
-LOCAL_MODULE_OWNER         := nvidia
-include $(BUILD_NVIDIA_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE               := bcmdhd_clm_darcy
-LOCAL_SRC_FILES            := $(FOSTER_BCM_PATH)/bcm4354/darcy.clm_blob
-LOCAL_MODULE_SUFFIX        := .blob
-LOCAL_MODULE_CLASS         := ETC
-LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware
-LOCAL_MODULE_TAGS          := optional
-LOCAL_MODULE_OWNER         := nvidia
-include $(BUILD_NVIDIA_PREBUILT)
+SPHYNX_BCM_PATH := ../../../../../../vendor/google/sphynx/rel-shield-r/bcm_firmware
 
 include $(CLEAR_VARS)
 LOCAL_MODULE               := bcmdhd_clm_foster
-LOCAL_SRC_FILES            := $(FOSTER_BCM_PATH)/bcm4354/foster.clm_blob
+LOCAL_SRC_FILES            := $(SPHYNX_BCM_PATH)/bcm4354/foster.clm_blob
 LOCAL_MODULE_SUFFIX        := .blob
 LOCAL_MODULE_CLASS         := ETC
 LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware
 LOCAL_MODULE_TAGS          := optional
 LOCAL_MODULE_OWNER         := nvidia
 include $(BUILD_NVIDIA_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE               := bcmdhd_clm_loki
-LOCAL_SRC_FILES            := $(FOSTER_BCM_PATH)/bcm4354/foster.clm_blob
-LOCAL_MODULE_SUFFIX        := .blob
-LOCAL_MODULE_CLASS         := ETC
-LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware
-LOCAL_MODULE_TAGS          := optional
-LOCAL_MODULE_OWNER         := nvidia
-include $(BUILD_NVIDIA_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE               := brcmfmac4356-pcie.clm_blob
-LOCAL_SRC_FILES            := $(FOSTER_BCM_PATH)/bcm4356/brcmfmac4356-pcie.clm_blob
-LOCAL_MODULE_CLASS         := ETC
-LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware
-LOCAL_MODULE_TAGS          := optional
-LOCAL_MODULE_OWNER         := nvidia
-include $(BUILD_NVIDIA_PREBUILT)
-endif

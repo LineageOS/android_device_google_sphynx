@@ -14,7 +14,7 @@
 
 # Purposefully unguarded, these are not available in any supported branch
 LOCAL_PATH := $(call my-dir)
-EXTERNAL_BCM_PATH := ../../../../../../vendor/nvidia/foster/external/bcm_firmware
+EXTERNAL_BCM_PATH := ../../../../../../vendor/google/sphynx/external/bcm_firmware
 
 include $(CLEAR_VARS)
 LOCAL_MODULE               := nvram_smaug_4354

@@ -1,10 +1,11 @@
 # AV
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.media.avsync=true
+    persist.sys.media.avsync=true \
+    ro.hardware.audio.primary=sphynx
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    bluetooth.device.default_name=SHIELD Android TV
+    bluetooth.device.default_name=Pixel C
 
 ifneq ($(TARGET_TEGRA_KERNEL),3.10)
 # Bpf

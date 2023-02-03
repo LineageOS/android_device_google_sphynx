@@ -13,7 +13,4 @@
 # limitations under the License.
 
 PRODUCT_PACKAGES += \
-    bcmdhd_clm_darcy \
-    bcmdhd_clm_foster \
-    bcmdhd_clm_loki \
-    brcmfmac4356-pcie.clm_blob
+    bcmdhd_clm_foster
