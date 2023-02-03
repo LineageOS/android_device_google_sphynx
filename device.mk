@@ -22,7 +22,6 @@ TARGET_TEGRA_CAMERA   := rel-shield-r
 TARGET_TEGRA_CEC      :=
 TARGET_TEGRA_KERNEL   := 4.9
 TARGET_TEGRA_KEYSTORE := software
-TARGET_TEGRA_WIDEVINE := rel-shield-r
 TARGET_TEGRA_WIFI     := bcm
 TARGET_TEGRA_WIREGUARD := compat
 
@@ -71,6 +70,12 @@ PRODUCT_PACKAGES += \
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 1800
 TARGET_SCREEN_WIDTH  := 2560
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4-service.clearkey \
+    android.hardware.drm@1.3.vendor \
+    android.hardware.drm@1.4.vendor
 
 # GMS
 ifeq ($(WITH_GMS),true)
