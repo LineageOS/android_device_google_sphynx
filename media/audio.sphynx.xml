@@ -1,23 +1,167 @@
 <audiohal>
-    <!-- Name varies by model variant, but is always card number 1 -->
-    <mixer card="1">
+    <mixer name="tegrasndt210ref">
+        <pre_init>
+            <!-- Boot ADSP -->
+            <ctl name="ADSP init" val="1"/>
+        </pre_init>
         <init>
-            <ctl name="I2S2 Mux" val="ADMAIF2"/>
-            <ctl name="ADMAIF2 Mux" val="I2S2"/>
             <ctl name="I2S1 Mux" val="ADMAIF1"/>
             <ctl name="ADMAIF1 Mux" val="I2S1"/>
+
+            <ctl name="I2S1 Sample Rate" val="48000"/>
+
+            <ctl name="DAC1 Playback Volume" val="87"/>
+            <ctl name="STO1 ADC Boost Volume" val="2"/>
+            <ctl name="STO2 ADC Boost Volume" val="2"/>
+            <ctl name="STO3 ADC Boost Volume" val="0"/>
+            <ctl name="Mono ADC Boost Volume" val="2"/>
+            <ctl name="ADC1 Capture Volume" val="23"/>
+            <ctl name="ADC2 Capture Volume" val="23"/>
+            <ctl name="ADC3 Capture Volume" val="23"/>
+            <ctl name="Mic Volume" val="207"/>
+            <ctl name="Frontend PGA Volume" val="1"/>
+
+            <ctl name="Stereo1 DMIC Mux" val="DMIC2"/>
+            <ctl name="Stereo1 ADC2 Mux" val="DMIC"/>
+            <ctl name="Stereo2 DMIC Mux" val="DMIC1"/>
+            <ctl name="Stereo2 ADC2 Mux" val="DMIC"/>
+
+            <ctl name="Stereo3 ADC1 Mux" val="Stereo DAC MIX"/>
+            <ctl name="DAC1 Mux" val="IF1 DAC 01"/>
+            <ctl name="DAC1 MIXL DAC1 Switch" val="1"/>
+            <ctl name="DAC1 MIXR DAC1 Switch" val="1"/>
+            <ctl name="Stereo DAC MIXL DAC1 L Switch" val="1"/>
+            <ctl name="Stereo DAC MIXR DAC1 R Switch" val="1"/>
+            <ctl name="DAC3 L Mux" val="IF3 DAC L"/>
+            <ctl name="DAC3 R Mux" val="IF3 DAC R"/>
+            <ctl name="DD1 MIXL DAC3 L Switch" val="1"/>
+            <ctl name="DD1 MIXR DAC3 R Switch" val="1"/>
+            <ctl name="DACL Mux" val="DACL"/>
+            <ctl name="DACR Mux" val="DACR"/>
+
+            <ctl name="Sto1 ADC MIXL ADC2 Switch" val="1"/>
+            <ctl name="Sto1 ADC MIXR ADC2 Switch" val="1"/>
+            <ctl name="Sto2 ADC MIXL ADC2 Switch" val="1"/>
+            <ctl name="Sto2 ADC MIXR ADC2 Switch" val="1"/>
+            <ctl name="Sto3 ADC MIXL ADC1 Switch" val="1"/>
+            <ctl name="Sto3 ADC MIXR ADC1 Switch" val="1"/>
+
+            <!--
+            IF1 - link to SoC
+            IF2 - link to Speaker
+            IF3 - link to Headset
+            -->
+            <ctl name="IF1 ADC1 Mux" val="STO1 ADC MIX"/>
+            <ctl name="IF1 ADC2 Mux" val="STO2 ADC MIX"/>
+            <ctl name="IF1 ADC3 Mux" val="OB45"/>
+            <ctl name="IF1 ADC TDM Swap Mux" val="1/2/3/4"/>
+
+            <ctl name="IF2 ADC1 Mux" val="OB01"/>
+            <ctl name="IF2 ADC2 Mux" val="OB23"/>
+            <ctl name="IF2 ADC3 Mux" val="OB45"/>
+            <ctl name="IF2 ADC TDM Swap Mux" val="2/3/1/4"/>
+
+            <ctl name="IF3 ADC Mux" val="OB01"/>
+
+            <ctl name="IF2 ADC3 Swap Mux" val="L/R"/>
+
+            <ctl name="Int Spk Switch" val="0"/>
+            <ctl name="Headphone Jack Switch" val="0"/>
+            <ctl name="Mic Jack Switch" val="0"/>
+            <ctl name="Int Mic Switch" val="0"/>
         </init>
     </mixer>
 
-    <device name="hdmi">
+    <!-- Out devices start here-->
+    <device name="speaker">
         <path name="on">
+            <ctl name="Headphone Jack Switch" val="0"/>
+            <ctl name="ADC3 Capture Volume" val="28"/>
+            <ctl name="IF2 ADC3 Mux" val="STO3 ADC MIX"/>
+            <ctl name="IF3 ADC Mux" val="OB01"/>
+            <ctl name="Int Spk Switch" val="1"/>
         </path>
+
         <path name="off">
+            <ctl name="ADC3 Capture Volume" val="23"/>
+            <ctl name="IF2 ADC3 Mux" val="OB45"/>
+            <ctl name="Int Spk Switch" val="0"/>
         </path>
     </device>
 
+    <device name="headphone">
+        <path name="on">
+            <ctl name="Int Spk Switch" val="0"/>
+            <ctl name="IF3 ADC Mux" val="STO3 ADC MIX"/>
+            <ctl name="Headphone Jack Switch" val="1"/>
+        </path>
+        <path name="off">
+            <ctl name="IF3 ADC Mux" val="OB1"/>
+            <ctl name="Headphone Jack Switch" val="0"/>
+        </path>
+    </device>
+
+    <!-- <device name="speaker-and-headphone">
+        <path name="on">
+            <ctl name="IF2 ADC3 Mux" val="STO3 ADC MIX"/>
+            <ctl name="IF3 ADC Mux" val="STO3 ADC MIX"/>
+            <ctl name="Int Spk Switch" val="1"/>
+            <ctl name="Headphone Jack Switch" val="1"/>
+        </path>
+        <path name="off">
+            <ctl name="IF2 ADC3 Mux" val="OB45"/>
+            <ctl name="IF3 ADC Mux" val="OB1"/>
+            <ctl name="Int Spk Switch" val="0"/>
+            <ctl name="Headphone Jack Switch" val="0"/>
+        </path>
+    </device>
+
+    <device name="speaker-and-headset">
+        <path name="on">
+            <ctl name="IF2 ADC3 Mux" val="STO3 ADC MIX"/>
+            <ctl name="IF3 ADC Mux" val="STO3 ADC MIX"/>
+            <ctl name="Int Spk Switch" val="1"/>
+            <ctl name="Headphone Jack Switch" val="1"/>
+        </path>
+        <path name="off">
+            <ctl name="IF2 ADC3 Mux" val="OB45"/>
+            <ctl name="IF3 ADC Mux" val="OB1"/>
+            <ctl name="Int Spk Switch" val="0"/>
+            <ctl name="Headphone Jack Switch" val="0"/>
+        </path>
+    </device>  -->
+    <!-- End -->
+
+    <!-- In devices start here -->
+    <device name="mic">
+        <path name="on">
+            <ctl name="Mic Jack Switch" val="0"/>
+            <ctl name="Int Mic Switch" val="1"/>
+        </path>
+        <path name="off">
+            <ctl name="Int Mic Switch" val="0"/>
+        </path>
+    </device>
+
+    <device name="aux">
+        <path name="on">
+            <ctl name="Int Mic Switch" val="0"/>
+            <ctl name="Stereo1 ADC2 Mux" val="DD MIX1"/>
+            <ctl name="Mic Jack Switch" val="1"/>
+            <ctl name="ADC1 Capture Volume" val="27"/>
+        </path>
+        <path name="off">
+            <ctl name="Stereo1 ADC2 Mux" val="DMIC"/>
+            <ctl name="Mic Jack Switch" val="0"/>
+            <ctl name="ADC1 Capture Volume" val="23"/>
+        </path>
+    </device>
+    <!-- End -->
+
     <!-- Stream Configuration -->
-    <stream type="pcm" dir="out" card="0" device="3" rate="48000"> <!-- Tegra HDA -->
+    <stream type="pcm" dir="out" card="0" device="0" rate="48000"> <!-- Tegra HDA -->
+    </stream>
+    <stream type="pcm" dir="out" card="1" device="0" rate="48000"> <!-- Device ASoC Machine driver -->
     </stream>
     <stream type="pcm" dir="in" card="1" device="0" rate="48000"> <!-- Device ASoC Machine driver -->
     </stream>
