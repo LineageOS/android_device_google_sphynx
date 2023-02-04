@@ -17,6 +17,7 @@ PRODUCT_SYSTEM_PROPERTY_OVERRIDES += \
 
 # USB configfs
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.lineage.tegra.model=Pixel C \
     ro.vendor.nv.usb.pid.adb=7104 \
     ro.vendor.nv.usb.pid.accessory.adb=7105 \
     ro.vendor.nv.usb.pid.audio_source.adb=7106 \
