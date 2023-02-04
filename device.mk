@@ -16,6 +16,7 @@
 
 TARGET_TEGRA_VARIANT    := common
 
+TARGET_TEGRA_AUDIO    := tinyhal
 TARGET_TEGRA_BT       := bcm
 TARGET_TEGRA_CAMERA   := rel-shield-r
 TARGET_TEGRA_CEC      :=
@@ -61,13 +62,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
 
 # Audio
-ifneq ($(TARGET_TEGRA_AUDIO),)
 PRODUCT_PACKAGES += \
     audio_effects.xml \
     audio_policy_configuration.xml \
-    nvaudio_conf.xml \
-    nvaudio_fx.xml
-endif
+    audio.sphynx.xml
 
 # Boot Animation
 TARGET_BOOTANIMATION_HALF_RES := true
