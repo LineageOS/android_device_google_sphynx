@@ -56,6 +56,7 @@ TARGET_SCREEN_DENSITY := 320
 TARGET_KERNEL_CLANG_COMPILE    := false
 KERNEL_TOOLCHAIN               := $(shell pwd)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-9.3/bin
 KERNEL_TOOLCHAIN_PREFIX        := aarch64-buildroot-linux-gnu-
+BOARD_KERNEL_CMDLINE           += androidboot.selinux=permissive
 TARGET_KERNEL_SOURCE           := kernel/nvidia/kernel-$(TARGET_TEGRA_KERNEL)-sphynx
 TARGET_KERNEL_CONFIG           := tegra_android_defconfig
 TARGET_KERNEL_RECOVERY_CONFIG  := tegra_android_recovery_defconfig
