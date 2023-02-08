@@ -125,4 +125,8 @@
     <!-- Controls whether the nav bar can move from the bottom to the side in landscape.
          Only applies if the device display is not square. -->
     <bool name="config_navBarCanMove">false</bool>
+
+    <!-- The BT name of the keyboard packaged with the device. If this is defined, SystemUI will
+         automatically try to pair with it when the device exits tablet mode. -->
+    <string translatable="false" name="config_packagedKeyboardName">Pixel C Keyboard</string>
 </resources>
