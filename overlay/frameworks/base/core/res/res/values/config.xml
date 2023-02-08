@@ -64,10 +64,20 @@
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
         <item>10</item>
+        <item>40</item>
+        <item>90</item>
+        <item>125</item>
         <item>160</item>
-        <item>320</item>
+        <item>190</item>
+        <item>225</item>
+        <item>290</item>
+        <item>350</item>
+        <item>500</item>
         <item>640</item>
-        <item>1280</item>
+        <item>1300</item>
+        <item>2600</item>
+        <item>5000</item>
+        <item>10000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -75,12 +85,23 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>30</item>
-        <item>100</item>
-        <item>130</item>
-        <item>170</item>
-        <item>200</item>
-        <item>250</item>
+        <!-- This will be converted to kernel brightness level in light HAL -->
+        <item>1</item>     <!--  18 nit -->
+        <item>17</item>    <!--  57 nit -->
+        <item>33</item>    <!--  68 nit -->
+        <item>49</item>    <!--  91 nit -->
+        <item>65</item>    <!-- 125 nit -->
+        <item>81</item>    <!-- 148 nit -->
+        <item>97</item>    <!-- 170 nit -->
+        <item>113</item>   <!-- 193 nit -->
+        <item>129</item>   <!-- 216 nit -->
+        <item>145</item>   <!-- 239 nit -->
+        <item>161</item>   <!-- 273 nit -->
+        <item>177</item>   <!-- 307 nit -->
+        <item>193</item>   <!-- 364 nit -->
+        <item>209</item>   <!-- 409 nit -->
+        <item>225</item>   <!-- 455 nit -->
+        <item>241</item>   <!-- 500 nit -->
     </integer-array>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
