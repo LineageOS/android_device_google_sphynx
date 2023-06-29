@@ -69,6 +69,15 @@ PRODUCT_PACKAGES += \
     nvaudio_fx.xml
 endif
 
+# Boot Animation
+TARGET_SCREEN_HEIGHT := 1800
+TARGET_SCREEN_WIDTH  := 2560
+
+# GMS
+ifeq ($(WITH_GMS),true)
+GMS_MAKEFILE=gms_minimal.mk
+endif
+
 # Keylayouts
 PRODUCT_PACKAGES += \
     gpio-keys.kl
