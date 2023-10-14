@@ -61,6 +61,7 @@ TARGET_KERNEL_CONFIG           := tegra_android_defconfig
 TARGET_KERNEL_RECOVERY_CONFIG  := tegra_android_recovery_defconfig
 BOARD_KERNEL_IMAGE_NAME        := Image.fit
 TARGET_KERNEL_ADDITIONAL_FLAGS := "NV_BUILD_KERNEL_OPTIONS=$(TARGET_TEGRA_KERNEL)"
+TARGET_KERNEL_VARIANT_CONFIG := smaug_variant_defconfig
 include device/google/sphynx/modules.mk
 
 # Recovery
