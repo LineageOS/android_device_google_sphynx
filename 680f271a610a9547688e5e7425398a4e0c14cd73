@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83e8046f_43ae944a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2023-10-18T04:29:24Z",
+      "side": 1,
+      "message": "Sounds like a fixup, shouldn\u0027t this be squashed to the rebrand?",
+      "revId": "680f271a610a9547688e5e7425398a4e0c14cd73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
