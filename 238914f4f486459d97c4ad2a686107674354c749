@@ -34,6 +34,24 @@
       "parentUuid": "df8d730f_7a9ecd2d",
       "revId": "238914f4f486459d97c4ad2a686107674354c749",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12ede72d_2e447717",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2023-10-18T04:54:58Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_device_google_sphynx/+/370120\nThat other kernel commit is what I meant.",
+      "parentUuid": "0b212792_20fe1f73",
+      "revId": "238914f4f486459d97c4ad2a686107674354c749",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
