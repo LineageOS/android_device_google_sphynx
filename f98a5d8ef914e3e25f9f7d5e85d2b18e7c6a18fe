@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9626fdb5_d36367a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2023-10-18T04:38:28Z",
+      "side": 1,
+      "message": "This needs to get the firmware from somewhere.",
+      "revId": "f98a5d8ef914e3e25f9f7d5e85d2b18e7c6a18fe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
