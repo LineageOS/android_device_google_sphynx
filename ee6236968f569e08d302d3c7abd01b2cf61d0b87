@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82e3ee94_222f6f54",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2023-10-18T04:36:32Z",
+      "side": 1,
+      "message": "This is really wrong. I don\u0027t remember if I fixed this in tegra-common yet. If not, I need to. This only exists to work around me making init rc files depend on the custom common init, which is something I shouldn\u0027t do.",
+      "revId": "ee6236968f569e08d302d3c7abd01b2cf61d0b87",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
