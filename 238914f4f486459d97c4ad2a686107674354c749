@@ -16,6 +16,24 @@
       "message": "Maybe squash this with the kernel target change to keep all the kernel related stuff together. Not blocking, just style nitpicks.",
       "revId": "238914f4f486459d97c4ad2a686107674354c749",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b212792_20fe1f73",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-10-18T04:48:32Z",
+      "side": 1,
+      "message": "nah cause that\u0027d DNM and this isn\u0027t, but I did fix style.",
+      "parentUuid": "df8d730f_7a9ecd2d",
+      "revId": "238914f4f486459d97c4ad2a686107674354c749",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
