@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df8d730f_7a9ecd2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2023-10-18T04:42:46Z",
+      "side": 1,
+      "message": "Maybe squash this with the kernel target change to keep all the kernel related stuff together. Not blocking, just style nitpicks.",
+      "revId": "238914f4f486459d97c4ad2a686107674354c749",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
