@@ -16,6 +16,24 @@
       "message": "This isn\u0027t complete or queued for the common kernel. Should be removed from this chain and queued when the kernel support is ready. Also, check modprobe deps, should only need the machine driver, which will then pull the codecs.",
       "revId": "d0a06b92dac4c9eb09aff9cddce8292be4797217",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bba4fec0_2119359d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-10-18T04:48:48Z",
+      "side": 1,
+      "message": "moved to DNM",
+      "parentUuid": "2f0671e1_ebeacb24",
+      "revId": "d0a06b92dac4c9eb09aff9cddce8292be4797217",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
