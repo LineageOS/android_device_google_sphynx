@@ -17,7 +17,6 @@ COMMON_BCM_PATH := device/nvidia/tegra-common/vendor/rel-shield-r/bcm_firmware
 
 include $(COMMON_BCM_PATH)/bcm4354/device-bcm.mk
 include $(LOCAL_PATH)/clm.mk
-include $(LOCAL_PATH)/nvram.mk
 
 PRODUCT_PACKAGES += \
     bcm4350
