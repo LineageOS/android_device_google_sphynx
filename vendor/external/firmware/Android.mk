@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-EXTERNAL_FIRMWARE_PATH := ../../../../../vendor/google/sphynx/firmware
+EXTERNAL_FIRMWARE_PATH := ../../../../../../vendor/google/sphynx/firmware
 
 include $(CLEAR_VARS)
 LOCAL_MODULE               := bpmp-lite
