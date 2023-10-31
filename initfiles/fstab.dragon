@@ -3,8 +3,8 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-/dev/block/platform/sdhci-tegra.3/by-name/APP           /                   ext4      ro,noatime                                                          wait
-/dev/block/platform/sdhci-tegra.3/by-name/VNR           /vendor             ext4      ro,noatime                                                          recoveryonly
+/dev/block/by-name/APP					/system             ext4      ro,noatime                                                          wait,first_stage_mount
+/dev/block/by-name/VNR				        /vendor             ext4      ro,noatime                                                          wait,first_stage_mount
 /dev/block/platform/sdhci-tegra.3/by-name/CAC           /cache              ext4      noatime,nosuid,nodev,data=ordered,barrier=1,nodelalloc              wait,formattable
 /dev/block/platform/sdhci-tegra.3/by-name/KERN-A        /boot               emmc      defaults                                                            defaults
 /dev/block/platform/sdhci-tegra.3/by-name/MSC           /misc               emmc      defaults                                                            defaults
