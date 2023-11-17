@@ -19,4 +19,5 @@ include $(COMMON_BCM_PATH)/bcm4354/device-bcm.mk
 include $(LOCAL_PATH)/clm.mk
 
 PRODUCT_PACKAGES += \
-    bcm4350
+    bcm4350 \
+    nvram_smaug_4354
