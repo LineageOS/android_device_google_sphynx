@@ -1,4 +1,4 @@
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,16 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Purposefully unguarded, these are not available in any supported branch
 LOCAL_PATH := $(call my-dir)
-EXTERNAL_BCM_PATH := ../../../../../../vendor/google/sphynx/external/bcm_firmware
+
+SPHYNX_FIRMWARE_PATH := ../../../../../../vendor/google/sphynx/opm8/firmware
 
 include $(CLEAR_VARS)
-LOCAL_MODULE               := nvram_smaug_4354
-LOCAL_SRC_FILES            := $(EXTERNAL_BCM_PATH)/bcm4354/bcmdhd.cal
-LOCAL_MODULE_SUFFIX        := .txt
+LOCAL_MODULE               := bpmp-lite
+LOCAL_SRC_FILES            := $(SPHYNX_FIRMWARE_PATH)/bpmp.bin
+LOCAL_MODULE_SUFFIX        := .bin
 LOCAL_MODULE_CLASS         := ETC
-LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware
-LOCAL_MODULE_TAGS          := optional
-LOCAL_MODULE_OWNER         := nvidia
-include $(BUILD_NVIDIA_PREBUILT)
+LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware/tegra21x
+include $(BUILD_PREBUILT)

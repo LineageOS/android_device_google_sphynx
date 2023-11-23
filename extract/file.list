@@ -1,1 +1,4 @@
+stock-ryu	system/etc/wifi/bcmdhd.cal			bcm_firmware/bcm4354/
 stock-t210	vendor/firmware/bcmdhd_clm_foster.blob		bcm_firmware/bcm4354/foster.clm_blob
+
+stock-ryu	vendor/firmware/nvidia/tegra210/bpmp.bin	firmware/
