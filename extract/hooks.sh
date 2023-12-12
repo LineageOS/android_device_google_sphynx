@@ -27,10 +27,10 @@ function handle_extract() {
         unzip -d ${ESPATH} ${TMPDIR}/downloads/${sname}.zip 1>/dev/null 2>&1;
         unzip -d ${ESPATH} ${ESPATH}/${devname}-*/image-${devname}-*.zip 1>/dev/null system.img vendor.img 2>&1;
 
-        ${HOST_BINS}/simg2img ${ESPATH}/system.img ${ESPATH}/system.raw.img;
+        simg2img ${ESPATH}/system.img ${ESPATH}/system.raw.img;
         7z x -o${ESPATH}/system ${ESPATH}/system.raw.img 1>/dev/null 2>&1;
 
-        ${HOST_BINS}/simg2img ${ESPATH}/vendor.img ${ESPATH}/vendor.raw.img;
+        simg2img ${ESPATH}/vendor.img ${ESPATH}/vendor.raw.img;
         7z x -o${ESPATH}/vendor ${ESPATH}/vendor.raw.img 1>/dev/null 2>&1;
 
         rm -rf \
