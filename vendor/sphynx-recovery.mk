@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-SPHYNX_FIRMWARE_PATH := vendor/google/sphynx/external/firmware
+SPHYNX_FIRMWARE_PATH := vendor/google/sphynx/opm8/firmware
 
 # Firmware
 PRODUCT_COPY_FILES += \
