@@ -18,7 +18,6 @@ TARGET_TEGRA_VARIANT    := common
 
 TARGET_TEGRA_AUDIO    := tinyhal
 TARGET_TEGRA_BT       := bcm
-TARGET_TEGRA_CAMERA   := rel-shield-r
 TARGET_TEGRA_CEC      :=
 TARGET_TEGRA_KERNEL   := 4.9
 TARGET_TEGRA_KEYSTORE := software
