@@ -47,9 +47,10 @@
         <!-- Primary Audio HAL -->
         <module name="primary" halVersion="2.0">
             <attachedDevices>
+                <item>Speaker</item>
                 <item>AUX Digital</item>
             </attachedDevices>
-            <defaultOutputDevice>AUX Digital</defaultOutputDevice>
+            <defaultOutputDevice>Speaker</defaultOutputDevice>
 
             <!-- Primary HAL mixPorts and devicePorts -->
             <xi:include href="primary_module_mixports.xml"/>
@@ -57,6 +58,9 @@
 
             <!-- route declaration, i.e. list all available sources for a given sink -->
             <routes>
+                <!-- Playback routes -->
+                <route type="mix" sink="Speaker"
+                       sources="primary_output"/>
                 <!-- Playback routes -->
                 <route type="mix" sink="AUX Digital"
                        sources="primary_output"/>
