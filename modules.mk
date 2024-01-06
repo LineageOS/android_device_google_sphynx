@@ -26,6 +26,10 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     nvgpu
 
+# Sphynx specific backlight driver
+BOARD_VENDOR_KERNEL_MODULES_LOAD += \
+    lp855x_bl
+
 # Realtek 8168
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     r8168
