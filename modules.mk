@@ -38,6 +38,12 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     bluedroid_pm
 
+# Sphynx specific audio drivers
+BOARD_VENDOR_KERNEL_MODULES_LOAD += \
+    snd-soc-max98357a \
+    snd-soc-rt5677 \
+    snd-soc-nau8825
+
 # Tegra hdmi audio
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     snd-hda-tegra
@@ -55,7 +61,7 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     snd-soc-tegra210-alt-dmic \
     snd-soc-tegra210-alt-mvc \
     snd-soc-tegra210-alt-ope \
-    snd-soc-tegra-machine-driver
+    snd-soc-tegra-machine-driver-rt5677-mobile
 
 # Userspace aes crypto access
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
