@@ -73,6 +73,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2022-04-05
 
+# SELinux
+BOARD_VENDOR_SEPOLICY_DIRS += device/google/sphynx/sepolicy/vendor
+
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BOARD_VNDK_VERSION                     := current
