@@ -36,9 +36,6 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 # Bootloader versions
 TARGET_BOARD_INFO_FILE := device/google/sphynx/board-info.txt
 
-# Manifest
-DEVICE_MANIFEST_FILE := device/google/sphynx/manifest.xml
-
 # Bluetooth
 ifeq ($(TARGET_TEGRA_BT),bcm)
 BOARD_CUSTOM_BT_CONFIG := device/google/sphynx/comms/vnd_sphynx.txt
