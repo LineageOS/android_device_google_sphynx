@@ -16,8 +16,3 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_sphynx.mk
-
-COMMON_LUNCH_CHOICES := \
-    lineage_sphynx-eng \
-    lineage_sphynx-user \
-    lineage_sphynx-userdebug
