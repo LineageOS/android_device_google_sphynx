@@ -80,4 +80,7 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BOARD_VNDK_VERSION                     := current
 PRODUCT_FULL_TREBLE_OVERRIDE           := true
 
+# Updater
+AB_OTA_UPDATER := false
+
 include device/nvidia/t210-common/BoardConfigCommon.mk
