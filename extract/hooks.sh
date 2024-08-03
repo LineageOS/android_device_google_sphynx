@@ -28,10 +28,12 @@ function handle_extract() {
         unzip -d ${ESPATH} ${ESPATH}/${devname}-*/image-${devname}-*.zip 1>/dev/null system.img vendor.img 2>&1;
 
         simg2img ${ESPATH}/system.img ${ESPATH}/system.raw.img;
-        7z x -o${ESPATH}/system ${ESPATH}/system.raw.img 1>/dev/null 2>&1;
+         # 7z complains about 'dangerous symlinks', so the return value must be ignored
+        7z x -o${ESPATH}/system ${ESPATH}/system.raw.img 1>/dev/null 2>&1 || true;
 
         simg2img ${ESPATH}/vendor.img ${ESPATH}/vendor.raw.img;
-        7z x -o${ESPATH}/vendor ${ESPATH}/vendor.raw.img 1>/dev/null 2>&1;
+         # 7z complains about 'dangerous symlinks', so the return value must be ignored
+        7z x -o${ESPATH}/vendor ${ESPATH}/vendor.raw.img 1>/dev/null 2>&1 || true;
 
         rm -rf \
           ${ESPATH}/${devname}-* \
