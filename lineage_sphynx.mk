@@ -30,7 +30,8 @@ PRODUCT_MANUFACTURER := Google
 PRODUCT_MODEL := Pixel C
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-        PRODUCT_NAME=ryu \
-        PRIVATE_BUILD_DESC="ryu-user 8.1.0 OPM8.190605.005 5749003 release-keys"
-
-BUILD_FINGERPRINT := google/ryu/dragon:8.1.0/OPM8.190605.005/5749003:user/release-keys
+    BuildDesc="ryu-user 8.1.0 OPM8.190605.005 5749003 release-keys" \
+    BuildFingerprint=google/ryu/dragon:8.1.0/OPM8.190605.005/5749003:user/release-keys \
+    DeviceName=ryu \
+    DeviceProduct=sphynx \
+    SystemName=sphynx
