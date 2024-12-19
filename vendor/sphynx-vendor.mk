@@ -17,7 +17,5 @@ include device/nvidia/tegra-common/vendor/common-by-flags.mk
 include device/google/sphynx/vendor/rel-shield-r/bcm_firmware/bcm.mk
 include device/google/sphynx/vendor/sphynx-recovery.mk
 
-PRODUCT_PACKAGES += public.libraries
-
 # Smaug bpmp
 PRODUCT_PACKAGES += bpmp-lite
