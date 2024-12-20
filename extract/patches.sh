@@ -16,7 +16,7 @@
 function patch_smaug_nvram() {
   echo -n "Patching nvram default ccodes...";
 
-  sed -i 's/ccode=0/ccode=XY/'  ${LINEAGE_ROOT}/vendor/google/sphynx/opm8/bcm_firmware/bcm4354/bcmdhd.cal
+  sed -i 's/ccode=0/ccode=XY/'  ${LINEAGE_ROOT}/vendor/google/sphynx/opm8/bcm/bcm4354/bcmdhd.cal
 
   echo "";
 }
