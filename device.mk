@@ -119,6 +119,7 @@ PRODUCT_PACKAGES += \
 endif
 
 # VBoot
+PRODUCT_SUPPORTS_VBOOT := true
 # The dev key is used to sign boot and recovery images.
 # We expect this file to exist with the suffixes ".vbprivk" and ".vbpupk".
 # TODO: find a proper location for this
