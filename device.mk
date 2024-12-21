@@ -119,7 +119,11 @@ PRODUCT_PACKAGES += \
 endif
 
 # VBoot
-$(call inherit-product, build/target/product/vboot.mk)
+# The dev key is used to sign boot and recovery images.
+# We expect this file to exist with the suffixes ".vbprivk" and ".vbpupk".
+# TODO: find a proper location for this
+PRODUCT_VBOOT_SIGNING_KEY := external/vboot_reference/tests/devkeys/kernel_data_key
+PRODUCT_VBOOT_SIGNING_SUBKEY := external/vboot_reference/tests/devkeys/kernel_subkey
 
 # WiFi
 PRODUCT_PACKAGES += \
