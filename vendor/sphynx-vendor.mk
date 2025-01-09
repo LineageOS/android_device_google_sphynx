@@ -17,5 +17,20 @@ include device/nvidia/tegra-common/vendor/common-by-flags.mk
 include device/google/sphynx/vendor/rel-shield-r/bcm_firmware/bcm.mk
 include device/google/sphynx/vendor/sphynx-recovery.mk
 
-# Smaug bpmp
-PRODUCT_PACKAGES += bpmp-lite
+SPHYNX_BCM_PATH := vendor/google/sphynx/rel-shield-r/bcm
+OPM8_BCM_PATH := vendor/google/sphynx/opm8/bcm
+OPM8_BPMP_PATH := vendor/google/sphynx/opm8/firmware
+
+include device/nvidia/tegra-common/vendor/rel-shield-r/bcm/bcm4354.mk
+
+# Device specific bcm firmware
+PRODUCT_COPY_FILES += \
+    $(SPHYNX_BCM_PATH)/bcm4354/foster.clm_blob:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd_clm_foster.blob
+
+# Device specific bcm nvram
+PRODUCT_COPY_FILES += \
+    $(OPM8_BCM_PATH)/bcm4354/bcmdhd.cal:$(TARGET_COPY_OUT_VENDOR)/firmware/nvram_smaug_4354.txt
+
+# Device specific BPMP firmware
+PRODUCT_COPY_FILES += \
+    $(OPM8_FIRMWARE_PATH)/bpmp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tegra21x/bpmp-lite.bin
