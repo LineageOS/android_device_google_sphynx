@@ -32,4 +32,4 @@ PRODUCT_COPY_FILES += \
 # Device specific BPMP firmware
 PRODUCT_COPY_FILES += \
     $(OPM8_BPMP_PATH)/bpmp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tegra21x/bpmp-lite.bin \
-    $(OPM8_BPMP_PATH)/bpmp.bin:recovery/root/lib/firmware/bpmp-lite.bin
+    $(OPM8_BPMP_PATH)/bpmp.bin:recovery/root/lib/firmware/tegra21x/bpmp-lite.bin
