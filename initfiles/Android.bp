@@ -50,5 +50,6 @@ prebuilt_etc {
 cc_prebuilt_binary {
     name: "lkm_loader_target",
     srcs: ["lkm_loader_target.sh"],
+    filename: "lkm_loader_target.sh",
     vendor: true,
 }
