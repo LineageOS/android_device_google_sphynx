@@ -47,9 +47,9 @@ prebuilt_etc {
     src: "power.dragon.rc",
 }
 
-cc_prebuilt_binary {
+sh_binary {
     name: "lkm_loader_target",
-    srcs: ["lkm_loader_target.sh"],
     filename: "lkm_loader_target.sh",
+    src: "lkm_loader_target.sh",
     vendor: true,
 }
