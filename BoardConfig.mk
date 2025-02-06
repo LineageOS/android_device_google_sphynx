@@ -70,7 +70,7 @@ TARGET_RECOVERY_UPDATER_LIBS := librecoveryupdater_tegra
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2022-04-05
+VENDOR_SECURITY_PATCH := 2024-12-05
 
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += device/google/sphynx/sepolicy/vendor
