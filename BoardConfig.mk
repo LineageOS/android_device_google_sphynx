@@ -56,7 +56,7 @@ TARGET_KERNEL_CONFIG           := tegra_android_defconfig
 BOARD_KERNEL_IMAGE_NAME        := Image.fit
 TARGET_KERNEL_ADDITIONAL_FLAGS := "NV_BUILD_KERNEL_OPTIONS=$(TARGET_TEGRA_KERNEL)"
 TARGET_KERNEL_VARIANT_CONFIG   := smaug_variant_defconfig
-BOARD_KERNEL_CMDLINE           := "androidboot.boot_devices=sdhci-tegra.0,tegra-sata.0,sdhci-tegra.3"
+BOARD_KERNEL_CMDLINE           := androidboot.boot_devices=sdhci-tegra.0,tegra-sata.0,sdhci-tegra.3
 
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/nvidia
 TARGET_KERNEL_EXT_MODULES := \
