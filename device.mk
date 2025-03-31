@@ -75,7 +75,10 @@ TARGET_SCREEN_HEIGHT := 1800
 TARGET_SCREEN_WIDTH  := 2560
 
 # GMS
-WITH_GMS_COMMS_SUITE := false
+ifeq ($(WITH_GMS),true)
+GMS_MAKEFILE=gms_minimal.mk
+WITH_GMS_COMMS_SUITE=false
+endif
 
 # Keylayouts
 PRODUCT_PACKAGES += \
