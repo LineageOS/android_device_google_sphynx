@@ -1,7 +1,6 @@
 # AV
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.media.avsync=true \
-    ro.hardware.audio.primary=sphynx
+    persist.sys.media.avsync=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
