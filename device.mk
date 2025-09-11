@@ -74,6 +74,10 @@ TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 1800
 TARGET_SCREEN_WIDTH  := 2560
 
+# Bluetooth
+$(call soong_config_set,brcm_libbt,bdroid_buildcfg_include_dir,device/google/sphynx/comms)
+$(call soong_config_set,brcm_libbt,custom_bt_config,//device/google/nx:vnd_sphynx.txt)
+
 # GMS
 WITH_GMS_COMMS_SUITE := false
 
