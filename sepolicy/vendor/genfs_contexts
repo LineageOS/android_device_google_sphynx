@@ -1,0 +1,4 @@
+# The IIO bus entries are symlinks to these virtual devices on the Sphynx kernel.
+genfscon sysfs /devices/iio:device u:object_r:sysfs_iio:s0
+# The FIFO trigger is a child of the Cros-EC ring platform device.
+genfscon sysfs /devices/7000c400.i2c/i2c-1/1-001e/cros-ec-ctl.0.auto/cros-ec-ring.0/trigger u:object_r:sysfs_iio:s0

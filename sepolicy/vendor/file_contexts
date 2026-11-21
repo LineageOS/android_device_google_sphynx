@@ -13,6 +13,9 @@
 # Extcon sysfs (USB)
 /sys/devices/7000c400.i2c/i2c-1/1-001e/7000c400.i2c:ec@1e:extcon/extcon/extcon2/name u:object_r:sysfs_extcon_name:s0
 
+# Keep the trigger name label when ueventd reapplies the Tegra I2C file contexts.
+/sys/devices/7000c400\.i2c/i2c-1/1-001e/cros-ec-ctl\.0\.auto/cros-ec-ring\.0/trigger[0-9]+/name u:object_r:sysfs_iio:s0
+
 # Lightbar
 /sys/devices/7000c400.i2c/i2c-1/1-001e/cros-ec-ctl.0.auto/chromeos/cros_ec/lightbar/brightness u:object_r:sysfs_lightbar:s0
 
