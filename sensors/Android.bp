@@ -1,0 +1,38 @@
+cc_defaults {
+    name: "pixelc_sensors_defaults",
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-std=gnu++17",
+    ],
+    local_include_dirs: ["include"],
+}
+
+cc_library_static {
+    name: "libpixelc_sensor_engine",
+    defaults: ["pixelc_sensors_defaults"],
+    vendor: true,
+    srcs: [
+        "core/core.cpp",
+        "core/iio_engine.cpp",
+    ],
+}
+
+cc_library_shared {
+    name: "sensors.pixelc",
+    defaults: ["pixelc_sensors_defaults"],
+    relative_install_path: "hw",
+    vendor: true,
+    srcs: ["hal/sensors_hal.cpp"],
+    static_libs: ["libpixelc_sensor_engine"],
+    shared_libs: [
+        "libcutils",
+        "libdl",
+        "liblog",
+    ],
+    header_libs: [
+        "libhardware_headers",
+        "libutils_headers",
+    ],
+}
