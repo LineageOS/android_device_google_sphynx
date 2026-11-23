@@ -16,6 +16,24 @@
       "message": "copyrights on source files, SPDX, no dates",
       "revId": "1c963dde5db8ff707808ddd207dc6f952e2c4152",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b42404de_2a8630ea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38824
+      },
+      "writtenOn": "2026-11-23T22:47:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dc0d469f_e51d8740",
+      "revId": "1c963dde5db8ff707808ddd207dc6f952e2c4152",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
