@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bba2d7a2_10daeea5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-24T04:13:07Z",
+      "side": 1,
+      "message": "@adnanoudeh68@gmail.com topic needs your CR+1/V+1 to merge (which mean ready to merge / \"it works\" respectively).",
+      "revId": "8d5584d980e6154d9d3eb5ee83a82656971865d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
