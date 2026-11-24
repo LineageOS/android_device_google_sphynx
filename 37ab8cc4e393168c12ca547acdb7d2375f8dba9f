@@ -16,6 +16,24 @@
       "message": "was this pulled form anywhere? or generated from scratch? need refs if has an upstream hal.",
       "revId": "37ab8cc4e393168c12ca547acdb7d2375f8dba9f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37fe1b9a_ffc22a4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38824
+      },
+      "writtenOn": "2026-11-24T03:45:02Z",
+      "side": 1,
+      "message": "No upstream, it\u0027s new code (Claude did a lot of the typing). The reference was the stock Pixel C HAL in device/google/dragon, sensor_hub/. That\u0027s where the event format and sysfs usage come from, but it\u0027s tied to the 3.18 sensor nodes, so it wasn\u0027t worth porting.",
+      "parentUuid": "580b9e48_6901f0d3",
+      "revId": "37ab8cc4e393168c12ca547acdb7d2375f8dba9f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
