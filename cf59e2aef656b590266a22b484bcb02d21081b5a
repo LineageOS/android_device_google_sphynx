@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93a0fee9_c7b48cc5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-11-24T18:31:26Z",
+      "side": 1,
+      "message": "Question. If the kernel driver is exposing iio, then why can\u0027t this use the intel iio hal already available on org?",
+      "revId": "cf59e2aef656b590266a22b484bcb02d21081b5a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
