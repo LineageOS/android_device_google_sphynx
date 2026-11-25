@@ -123,6 +123,24 @@
       "parentUuid": "8cae83fd_ca80460d",
       "revId": "cf59e2aef656b590266a22b484bcb02d21081b5a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "db3e0ac0_b0ded27d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 27741
+      },
+      "writtenOn": "2026-11-25T23:07:39Z",
+      "side": 1,
+      "message": "Please do not copy paste claude output for (or use claude to create) review comments, this is considered extremely rude. No problem w AI usage, but this is unacceptable. Also please do not spam like this.\n\nPolling is fine, trigger and event are preferred. Just make it work with the hal.",
+      "parentUuid": "e25796fa_66306b97",
+      "revId": "cf59e2aef656b590266a22b484bcb02d21081b5a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
