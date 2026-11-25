@@ -16,6 +16,24 @@
       "message": "Question. If the kernel driver is exposing iio, then why can\u0027t this use the intel iio hal already available on org?",
       "revId": "cf59e2aef656b590266a22b484bcb02d21081b5a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c2e19a5_dacc8dab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38824
+      },
+      "writtenOn": "2026-11-25T18:16:19Z",
+      "side": 1,
+      "message": "It can\u0027t read the ring. That HAL wants one IIO device per sensor with standard scan names, and the Cros-EC ring is a single buffer for every EC sensor, tagged by sensor ID. It could poll in_accel_*_raw on the sensor device, but this driver keeps the 3.18 ABI: sampling_frequency is the EC batching interval in ms, frequency is the ODR, and there\u0027s no scale. Getting it to work means moving to mainline\u0027s cros_ec_sensors attributes, which is a bigger change than this restore.",
+      "parentUuid": "93a0fee9_c7b48cc5",
+      "revId": "cf59e2aef656b590266a22b484bcb02d21081b5a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
