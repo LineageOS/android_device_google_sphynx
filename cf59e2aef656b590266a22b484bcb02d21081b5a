@@ -105,6 +105,24 @@
       "message": "Re add me when ready",
       "revId": "cf59e2aef656b590266a22b484bcb02d21081b5a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e25796fa_66306b97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38824
+      },
+      "writtenOn": "2026-11-25T23:03:52Z",
+      "side": 1,
+      "message": "Would polling through the intel hal be ok, like nx does, or is it preferred to have per sensor buffers like mainline\u0027s cros_ec_sensorhub? The buffered version is a much bigger port to 4.9.",
+      "parentUuid": "8cae83fd_ca80460d",
+      "revId": "cf59e2aef656b590266a22b484bcb02d21081b5a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
