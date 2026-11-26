@@ -1,0 +1,2 @@
+# IIO Sensors
+ro.vendor.iio. u:object_r:vendor_iio_sensors_prop:s0

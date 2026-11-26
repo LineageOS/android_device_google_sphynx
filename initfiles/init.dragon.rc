@@ -16,6 +16,20 @@ import /vendor/etc/init/hw/init.tegra.rc
 import /vendor/etc/init/hw/init.t210.rc
 import /vendor/etc/init/hw/init.loki_foster_e_common.rc
 
+on init
+    # Intel IIO sensors HAL. It cuts IIO device names to seven characters,
+    # leaving "cros-ec" for both sensors, so set the properties by type.
+    # Poll mode is off: the EC only samples once a rate is set, which the
+    # HAL does not do when polling.
+    setprop ro.vendor.iio.accel.name "BMI160 Accelerometer"
+    setprop ro.vendor.iio.accel.vendor Bosch
+    setprop ro.vendor.iio.accel.max_range 78.45
+    setprop ro.vendor.iio.accel.quirks no-poll
+    setprop ro.vendor.iio.anglvel.name "BMI160 Gyroscope"
+    setprop ro.vendor.iio.anglvel.vendor Bosch
+    setprop ro.vendor.iio.anglvel.max_range 17.45
+    setprop ro.vendor.iio.anglvel.quirks no-poll
+
 on fs
     mount_all /vendor/etc/fstab.dragon
     swapon_all /vendor/etc/fstab.dragon
